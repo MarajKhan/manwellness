@@ -1,580 +1,122 @@
-<!DOCTYPE html>
-<html lang="hi">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Dua Dawai</title>
-
-<style>
-
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,body{
-    width:100%;
-    min-height:100%;
-}
-
-body{
-    background:#000;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-
-/* =========================
-   MAIN PAGE
-========================= */
-
-.page{
-    width:100%;
-    max-width:720px;
-    margin:auto;
-    min-height:100vh;
-    background:#000;
-    overflow:hidden;
-}
-
-
-/* =========================
-   Dua Dawai LOGO
-========================= */
-
-.logo{
-    width:150px;
-    margin:20px auto 25px;
-
-    text-align:center;
-
-    color:#fff;
-
-    font-size:31px;
-    font-weight:900;
-
-    line-height:.8;
-
-    letter-spacing:-2px;
-
-    transform:skew(-8deg);
-}
-
-.logo .more{
-    margin-top:6px;
-}
-
-
-/* =========================
-   FORM BOX
-========================= */
-
-.form-box{
-
-    margin:0 19px 36px;
-
-    padding:27px 21px 60px;
-
-    border:3px solid #ffad00;
-
-    border-radius:40px;
-
-    background:#000;
-}
-
-
-/* =========================
-   HEADING
-========================= */
-
-h1{
-
-    text-align:center;
-
-    color:#fff;
-
-    font-size:clamp(
-        25px,
-        5.2vw,
-        40px
-    );
-
-    line-height:1.45;
-
-    font-weight:800;
-
-    letter-spacing:-.5px;
-}
-
-
-/* =========================
-   DIVIDER
-========================= */
-
-.divider{
-
-    width:55%;
-
-    height:1px;
-
-    background:#ddd;
-
-    margin:24px auto 37px;
-}
-
-
-/* =========================
-   LABEL
-========================= */
-
-label{
-
-    display:block;
-
-    margin-bottom:17px;
-
-    font-size:clamp(
-        22px,
-        4.6vw,
-        33px
-    );
-
-    font-weight:700;
-}
-
-label span{
-    color:#ff0000;
-}
-
-
-/* =========================
-   INPUT
-========================= */
-
-input{
-
-    width:100%;
-
-    height:80px;
-
-    padding:0 18px;
-
-    margin-bottom:51px;
-
-    background:#222;
-
-    color:#fff;
-
-    border:2px solid #aaa;
-
-    border-radius:6px;
-
-    outline:none;
-
-    font-size:24px;
-
-    transition:.2s;
-}
-
-input:focus{
-
-    border-color:#ffad00;
-
-    box-shadow:
-    0 0 0 2px
-    rgba(255,173,0,.15);
-}
-
-
-/* =========================
-   SUBMIT BUTTON
-========================= */
-
-button{
-
-    border:none;
-
-    background:#ffad00;
-
-    color:#000;
-
-    padding:16px 40px;
-
-    border-radius:50px;
-
-    font-size:29px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.2s;
-}
-
-button:hover{
-
-    background:#ffb900;
-
-    transform:scale(1.02);
-}
-
-button:active{
-
-    transform:scale(.98);
-}
-
-
-/* =========================
-   SUCCESS MESSAGE
-========================= */
-
-#message{
-
-    margin-top:15px;
-
-    font-size:15px;
-
-    color:#ffad00;
-}
-
-
-/* =========================
-   PROMOTIONAL IMAGE
-========================= */
-
-.hero{
-
-    width:100%;
-
-    position:relative;
-
-    overflow:hidden;
-
-    line-height:0;
-}
-
-.hero img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
-    object-fit:cover;
-}
-
-
-/* =========================
-   LOGO ON IMAGE
-========================= */
-
-.small-logo{
-
-    position:absolute;
-
-    top:18px;
-
-    right:18px;
-
-    color:#fff;
-
-    font-size:20px;
-
-    font-weight:900;
-
-    line-height:.8;
-
-    text-align:center;
-
-    transform:skew(-8deg);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:480px){
-
-    .form-box{
-
-        margin-left:18px;
-        margin-right:18px;
-
-        padding:25px 17px 55px;
-
-        border-radius:35px;
-    }
-
-    input{
-
-        height:72px;
-
-        margin-bottom:43px;
-    }
-
-    button{
-
-        font-size:26px;
-
-        padding:14px 37px;
-    }
-
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:360px){
-
-    .form-box{
-
-        margin-left:14px;
-        margin-right:14px;
-    }
-
-    h1{
-        font-size:23px;
-    }
-
-    label{
-        font-size:21px;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="page">
-
-
-    <!-- PLAY MORE LOGO -->
-
-    <div class="logo">
-
-        <div>DuaDawai</div>
-
-        <div class="more">Ayurveda</div>
-
-    </div>
-
-
-    <!-- FORM -->
-
-    <div class="form-box">
-
-
-        <h1>
-
-            पावर, जोश और टाइमिंग बढ़ाने के लिए
-            <br>
-
-            अपना नाम और नंबर दर्ज करें
-
-        </h1>
-
-
-        <div class="divider"></div>
-
-
-        <form id="leadForm">
-
-
-            <!-- NAME -->
-
-            <label>
-
-                Name <span>*</span>
-
-            </label>
-
-
-            <input
-                type="text"
-                id="name"
-                placeholder=""
-                autocomplete="name"
-                required
-            >
-
-
-            <!-- PHONE -->
-
-            <label>
-
-                Phone Number <span>*</span>
-
-            </label>
-
-
-            <input
-                type="tel"
-                id="phone"
-                maxlength="10"
-                inputmode="numeric"
-                placeholder=""
-                autocomplete="tel"
-                required
-            >
-
-
-            <!-- BUTTON -->
-
-            <button type="submit">
-
-                Submit
-
-            </button>
-
-
-            <p id="message"></p>
-
-
-        </form>
-
-    </div>
-
-
-    <!-- IMAGE -->
-
-    <div class="hero">
-
-        <!-- 
-        Yahan apni image ka URL/path lagayein
-        -->
-
-        <img
-            src="C:\Users\Lenovo\Downloads\WhatsApp Image 2026-09-20 at 12.03.39 PM.jpeg"
-            alt="PLAY MORE"
-        >
-
-
-        <div class="small-logo">
-
-            Dua
-            <br>
-            Dawai
-
-        </div>
-
-    </div>
-
-
-</div>
-
-
-
 <script>
 
-/* =================================
-   FORM JAVASCRIPT
-================================= */
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/XXXXXXXXXXXX/exec";
+
 
 document
 .getElementById("leadForm")
-.addEventListener("submit", function(event){
+.addEventListener("submit", async function(event) {
 
     event.preventDefault();
 
 
-    /* Get values */
-
     const name =
-    document
-    .getElementById("name")
-    .value
-    .trim();
+        document
+        .getElementById("name")
+        .value
+        .trim();
 
 
     const phone =
-    document
-    .getElementById("phone")
-    .value
-    .trim();
+        document
+        .getElementById("phone")
+        .value
+        .trim();
 
 
     const message =
-    document
-    .getElementById("message");
+        document
+        .getElementById("message");
 
 
-    /* Name validation */
+    /* NAME VALIDATION */
 
-    if(name === ""){
+    if (name === "") {
 
         message.innerText =
         "Please enter your name.";
 
         return;
-
     }
 
 
-    /* Mobile validation */
+    /* PHONE VALIDATION */
 
-    if(!/^[6-9][0-9]{9}$/.test(phone)){
+    if (!/^[6-9][0-9]{9}$/.test(phone)) {
 
         message.innerText =
         "Please enter a valid 10 digit mobile number.";
 
         return;
+    }
+
+
+    /* BUTTON */
+
+    const button =
+        document.querySelector(
+            "#leadForm button"
+        );
+
+
+    button.disabled = true;
+
+    button.innerText =
+        "Submitting...";
+
+
+    try {
+
+        await fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+
+                method: "POST",
+
+                mode: "no-cors",
+
+                headers: {
+                    "Content-Type":
+                    "text/plain;charset=utf-8"
+                },
+
+                body: JSON.stringify({
+
+                    name: name,
+
+                    phone: phone
+
+                })
+
+            }
+        );
+
+
+        message.innerText =
+        "Thank you! Your details have been submitted.";
+
+
+        document
+        .getElementById("leadForm")
+        .reset();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        message.innerText =
+        "Something went wrong. Please try again.";
 
     }
 
 
-    /* Success */
+    button.disabled = false;
 
-    message.innerText =
-    "Thank you! Your details have been submitted.";
-
-
-    /*
-    IMPORTANT:
-
-    Abhi ye demo hai.
-
-    Data database me save nahi hoga.
-
-    PHP/MySQL/API lagane ke baad
-    yahan lead save kar sakte hain.
-    */
-
-
-    console.log("Name:",name);
-
-    console.log("Phone:",phone);
-
-
-    /* Clear form */
-
-    document
-    .getElementById("leadForm")
-    .reset();
+    button.innerText =
+    "Submit";
 
 });
 
 </script>
-
-
-</body>
-
-</html>
